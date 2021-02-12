@@ -1,0 +1,26 @@
+##Write a Python program to execute a string containing Python code.
+code='''def test(a):
+    def add(b):
+        nonlocal a
+        a += 1
+        return a+b
+    return add
+
+func= test(4)
+print(func(4))
+'''
+def exec_code():
+    exec(code)
+exec_code()
+
+Output: 9
+
+
+##Write a Python function to insert a string in the middle of a string
+def insert_sting_middle(str, word):
+    length=len(str)//2
+    s=str[:length] + word + str[length:]
+    return s
+print(insert_sting_middle('[[]]', 'Python'))
+
+Output: [[Python]]
